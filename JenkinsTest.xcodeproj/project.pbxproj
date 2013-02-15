@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D1FC2DAF73C45119E5A1BD3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 900288450D48480C9D0006F2 /* libPods.a */; };
 		ACB2B05B16CCF4FA00263886 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB2B05A16CCF4FA00263886 /* UIKit.framework */; };
 		ACB2B05D16CCF4FA00263886 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB2B05C16CCF4FA00263886 /* Foundation.framework */; };
 		ACB2B05F16CCF4FA00263886 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB2B05E16CCF4FA00263886 /* CoreGraphics.framework */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		900288450D48480C9D0006F2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB2B05716CCF4FA00263886 /* JenkinsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JenkinsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB2B05A16CCF4FA00263886 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ACB2B05C16CCF4FA00263886 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -58,6 +60,7 @@
 		ACB2B08816CCF4FA00263886 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ACB2B08A16CCF4FA00263886 /* JenkinsTestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JenkinsTestTests.h; sourceTree = "<group>"; };
 		ACB2B08B16CCF4FA00263886 /* JenkinsTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JenkinsTestTests.m; sourceTree = "<group>"; };
+		D753D6D41A5C472C9870D16A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,7 @@
 				ACB2B05B16CCF4FA00263886 /* UIKit.framework in Frameworks */,
 				ACB2B05D16CCF4FA00263886 /* Foundation.framework in Frameworks */,
 				ACB2B05F16CCF4FA00263886 /* CoreGraphics.framework in Frameworks */,
+				0D1FC2DAF73C45119E5A1BD3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +95,7 @@
 				ACB2B08416CCF4FA00263886 /* JenkinsTestTests */,
 				ACB2B05916CCF4FA00263886 /* Frameworks */,
 				ACB2B05816CCF4FA00263886 /* Products */,
+				D753D6D41A5C472C9870D16A /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +115,7 @@
 				ACB2B05C16CCF4FA00263886 /* Foundation.framework */,
 				ACB2B05E16CCF4FA00263886 /* CoreGraphics.framework */,
 				ACB2B07E16CCF4FA00263886 /* SenTestingKit.framework */,
+				900288450D48480C9D0006F2 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -170,6 +176,7 @@
 				ACB2B05316CCF4FA00263886 /* Sources */,
 				ACB2B05416CCF4FA00263886 /* Frameworks */,
 				ACB2B05516CCF4FA00263886 /* Resources */,
+				DB7541C1183149978AB52965 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,7 +214,7 @@
 			attributes = {
 				CLASSPREFIX = IT;
 				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = "Iléo Technologies";
+				ORGANIZATIONNAME = "Il√©o Technologies";
 			};
 			buildConfigurationList = ACB2B05216CCF4FA00263886 /* Build configuration list for PBXProject "JenkinsTest" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -263,6 +270,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		DB7541C1183149978AB52965 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -349,9 +370,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
+				VALID_ARCHS = "armv7 armv7s i386";
 			};
 			name = Debug;
 		};
@@ -383,21 +405,26 @@
 		};
 		ACB2B09016CCF4FA00263886 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D753D6D41A5C472C9870D16A /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JenkinsTest/JenkinsTest-Prefix.pch";
 				INFOPLIST_FILE = "JenkinsTest/JenkinsTest-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		ACB2B09116CCF4FA00263886 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D753D6D41A5C472C9870D16A /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JenkinsTest/JenkinsTest-Prefix.pch";
 				INFOPLIST_FILE = "JenkinsTest/JenkinsTest-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -456,6 +483,7 @@
 				ACB2B09116CCF4FA00263886 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACB2B09216CCF4FA00263886 /* Build configuration list for PBXNativeTarget "JenkinsTestTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +492,7 @@
 				ACB2B09416CCF4FA00263886 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
