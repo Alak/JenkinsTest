@@ -19,3 +19,4 @@ build/
 # Exclude Pod dépendencies
 #Pods/
 #Podfile.lock
+test-reports
